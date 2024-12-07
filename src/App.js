@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import MainRouter from './Router/MainRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import AppTheme from '../src/Theme/AppTheme';  // Import AppTheme
+import { GSAPProvider } from './gsap/gsapContext';
 
 // Create ThemeContext
 const ThemeContext = createContext();
@@ -15,7 +16,9 @@ function App() {
     <ThemeContext.Provider value={AppTheme}>
       <ThemeProvider theme={AppTheme}>
         <BrowserRouter>
-          <MainRouter />
+          <GSAPProvider>
+            <MainRouter />
+          </GSAPProvider>
         </BrowserRouter>
       </ThemeProvider>
     </ThemeContext.Provider>

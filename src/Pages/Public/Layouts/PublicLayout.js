@@ -1,16 +1,23 @@
-import React from 'react'
-import HomeAppBar from '../../../Component/Public/HomeAppBar'
-import { Outlet } from 'react-router-dom'
-import Footer from '../../../Component/Public/Footer'
+import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import HomeAppBar from '../../../Component/Public/HomeAppBar';
+import Footer from '../../../Component/Public/Footer';
+import { Toolbar } from '@mui/material';
 
 const PublicLayout = () => {
+    const location = useLocation();
+
+    // Paths where header and footer should be hidden
+    const hideHeaderFooter = location.pathname === '/*';
+
     return (
         <div>
-            <HomeAppBar />
+            {!hideHeaderFooter && <HomeAppBar />}
+            <Toolbar />
             <Outlet />
-            <Footer />
+            {!hideHeaderFooter && <Footer />}
         </div>
-    )
-}
+    );
+};
 
-export default PublicLayout
+export default PublicLayout;

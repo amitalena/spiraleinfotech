@@ -1,26 +1,45 @@
 import React from 'react';
-import { useThemeContext } from '../../App';
 import { Box, Button, Grid, Stack, TextField, Typography, useTheme } from '@mui/material';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { useLocation } from 'react-router-dom';
+
+const serviceData = [
+    { name: "App Development", color: '#11f', route: '/app-development-company' },
+    { name: "Web Development", color: '#f88336', route: '/web-development-company' },
+    { name: "API Services", color: '#212121', route: '/api-development-and-integration' },
+    { name: "Cross-platform App Development", color: '#FAEA7C', route: '/cross-plateform-app-development' },
+    { name: "eCommerce Services", color: '#bf360c', route: '/ecommerce-services' },
+    { name: "CMS Development", color: '#4fc3f7', route: '/cms-development-company' },
+    { name: "Privacy & Policy", color: '#41cf47', route: '/privacy-policy' },
+];
+const techData = [
+    { name: "Android", color: '#11f', route: '/app-development-company' },
+    { name: "iOS", color: '#f88336', route: '/ios-app-development-services' },
+    { name: "Php", color: '#212121', route: '/php-development-services' },
+    { name: "Laravel", color: '#FAEA7C', route: '/laravel-development-company' },
+    { name: "React.js", color: '#bf360c', route: '/reactjs-development-services' },
+    { name: "React Native", color: '#4fc3f7', route: '/react-native-app-development-company' },
+    { name: "Java", color: '#41cf47', route: '/java-development-company' },
+];
 
 const Footer = () => {
-    // const theme = useThemeContext();
     const theme = useTheme();
+    const location = useLocation();
     return (
         <>
             <Box sx={{
                 backgroundColor: theme.palette.primary.main, height: 'auto',
-                px: { xs: 2, lg: 15, md: 10 },
+                px: { xs: 2, lg: 22, md: 10 },
                 pt: { xs: 2, md: 5 },
                 color: '#FFF'
             }}>
-                <Grid container spacing={5} sx={{ borderBottom: '1px solid #ccc', pb: 5 }}>
-                    <Grid item xs={12} lg={4} sm={12} md={6}>
+                <Grid container spacing={2} sx={{ borderBottom: '1px solid #ccc' }}>
+                    <Grid item xs={12} lg={3.5} sm={12} md={6}>
                         <Typography variant='h6' py={1}>
                             About Company
                         </Typography>
-                        <Typography variant='body1' py={2}>
+                        <Typography variant='body2' py={2}>
                             Spirale Infosoft is one of the most trusted and reliable software development companies based in Delhi NCR. We provide our finest services in website designing and development. We have dedicated teams of experts and developers to help you in maintenance and digital marketing services as well.
                         </Typography>
                         <Stack direction={'row'} alignItems={'center'} py={2} justifyContent={'space-around'} sx={{
@@ -41,60 +60,63 @@ const Footer = () => {
                         </Stack>
                     </Grid>
 
-                    <Grid item xs={12} lg={2} sm={12} md={6}>
+                    <Grid item xs={12} lg={3} sm={12} md={6}>
                         <Typography variant='h5' py={1}>
                             Services
                         </Typography>
-                        {[
-                            'App Development',
-                            'API services',
-                            'Web Development',
-                            'Cross-Platform App Development',
-                            'eCommerce services',
-                            'CMS Development',
-                            'Privacy Policy'
-                        ].map((service, index) => (
-                            <Typography
-                                key={index}
-                                variant='body1'
-                                py={1}
-                                sx={{
-                                    transition: 'transform 0.3s ease-in-out',
-                                    '&:hover': {
-                                        backgroundColor: 'rgba(0, 0, 0, 0.08)',
-                                        transform: 'scale(1.05)',
-                                    },
-                                }}
-                            >
-                                {service}
-                            </Typography>
-                        ))}
-                    </Grid>
-
-                    <Grid item xs={12} lg={2} sm={12} md={6}>
-                        <Typography variant='h5' py={1}>
-                            Technologies
-                        </Typography>
-                        {['Android', 'iOS', 'Laravel', 'PHP', 'React.js', 'ReactNative', 'Java'].map((tech) => (
+                        {serviceData?.map((nestedItem, nestedIndex) => (
                             <Button
-                                key={tech}
-                                variant="text"
+                                fullWidth
+                                variant="none"
+                                key={nestedIndex}
+                                href={nestedItem.route || "#"}
+                                active={location.pathname === nestedItem.route}
                                 color="inherit"
                                 startIcon={<KeyboardArrowRightIcon />}
                                 sx={{
+                                    flexDirection: 'row', // Horizontal alignment for icon and text
+                                    justifyContent: 'flex-start',
                                     transition: 'transform 0.3s ease-in-out',
                                     '&:hover': {
-                                        backgroundColor: 'rgba(0, 0, 0, 0.08)',
+                                        color: '#fa2',
                                         transform: 'scale(1.05)',
                                     },
                                 }}
                             >
-                                {tech}
+                                {nestedItem.name}
                             </Button>
                         ))}
                     </Grid>
 
-                    <Grid item xs={12} lg={4} sm={12} md={6}>
+                    <Grid item xs={12} lg={2} sm={12} md={6}>
+                        <Typography variant="h5" py={1}>
+                            Technologies
+                        </Typography>
+                        {techData?.map((nestedItem, nestedIndex) => (
+                            <Button
+                                fullWidth
+                                variant="none"
+                                key={nestedIndex}
+                                href={nestedItem.route || "#"}
+                                active={location.pathname === nestedItem.route}
+                                color="inherit"
+                                startIcon={<KeyboardArrowRightIcon />}
+                                sx={{
+                                    flexDirection: 'row', // Horizontal alignment for icon and text
+                                    justifyContent: 'flex-start',
+                                    transition: 'transform 0.3s ease-in-out',
+                                    '&:hover': {
+                                        color: '#fa2',
+                                        transform: 'scale(1.05)',
+                                    },
+                                }}
+                            >
+                                {nestedItem.name}
+                            </Button>
+                        ))}
+                    </Grid>
+
+                    <Grid item xs={12} lg={3.5} sm={12} md={6}>
                         <Typography variant='h5' py={1}>
                             Enquiry
                         </Typography>
@@ -129,7 +151,7 @@ const Footer = () => {
                             />
                         </Box>
                         <Box py={1}>
-                            <Button variant="contained">Send Message</Button>
+                            <Button sx={{ background: theme.palette.primary.dark }} variant="contained">Send Message</Button>
                         </Box>
                     </Grid>
                 </Grid>

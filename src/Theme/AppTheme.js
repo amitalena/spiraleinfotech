@@ -27,10 +27,10 @@ const AppTheme = createTheme({
             default: "hsl(0, 0%, 100%)",
         },
         primary: {
-            main: colors.blue[900],
-            dark: colors.blue[700],
-            deem: colors.blue[500],
-            light: colors.blue[50],
+            main: colors.indigo[900],
+            dark: colors.indigo[700],
+            deem: colors.indigo[500],
+            light: colors.indigo[50],
         },
         secondary: {
             main: colors.orange[900],
@@ -59,7 +59,7 @@ const AppTheme = createTheme({
         tintBlue: '#326EE6'
     },
     shape: {
-        borderRadius: 2
+        borderRadius: 0
     },
     typography: {
         fontFamily: 'Livvic',
@@ -103,35 +103,35 @@ const AppTheme = createTheme({
         },
         body1: {
             // fontFamily: "Poppins",
-            fontWeight: '700',
-            fontSize: "0.678rem",
+            fontWeight: '400',
+            fontSize: "1rem",
             lineHeight: 1.5,
             letterSpacing: "0.01038em"
         },
         body2: {
             // fontFamily: "Poppins",
-            fontWeight: 400,
-            fontSize: "0.89rem",
+            // fontWeight: 400,
+            fontSize: '0.875rem',
             lineHeight: 1.43,
+            fontWeight: 400,
             letterSpacing: "0.01071em"
         },
         subtitle1: {
             fontWeight: 400,
             fontSize: "1rem",
             lineHeight: 1.75,
-            letterSpacing: "0.00938em"
+            letterSpacing: "0.158em"
         },
         subtitle2: {
             fontWeight: 500,
             fontSize: "0.875rem",
             lineHeight: 1.57,
-            letterSpacing: "0.00714em"
+            letterSpacing: "0.10714em"
         },
         button: {
-            borderRadius: '50px',
             fontWeight: 400,
             fontSize: "0.675rem",
-            lineHeight: 1.55,
+            lineHeight: 2.05,
             letterSpacing: "0.02857em",
             textTransform: "uppercase",
         },

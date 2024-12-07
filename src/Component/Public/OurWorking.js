@@ -1,6 +1,5 @@
-import { Box, Card, CardContent, Grid, Paper, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Card, CardContent, Grid, Stack, Typography, useTheme } from '@mui/material';
 import React from 'react';
-import { useThemeContext } from '../../App';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import ApiIcon from '@mui/icons-material/Api';
 import AppleIcon from '@mui/icons-material/Apple';
@@ -47,7 +46,7 @@ const OurWorking = () => {
     return (
         <Box
             sx={{
-                px: { xs: 2, lg: 15, md: 10 },
+                px: { xs: 2, lg: 22, md: 10 },
                 py: { xs: 2, md: 3 },
             }}
         >

@@ -8,7 +8,6 @@ import Screen1 from '../../assest/Screen1.png';
 import Group from '../../assest/Group.png';
 import Group1 from '../../assest/Group1.png';
 import Group2 from '../../assest/Vector.png';
-import { useThemeContext } from '../../App';
 import OurServices from '../../Component/Public/OurServices';
 import Star from '../../assest/Star.png'
 import Boxicon from '../../assest/Boxicon.png'
@@ -22,7 +21,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
 import TwentyFourMpIcon from '@mui/icons-material/TwentyFourMp';
 import Slider from '../../Component/Public/Slider'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+// import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import technologybgimg from '../../assest/technologyimg.webp'
 import Callus from '../../assest/callus.webp'
 import callshape1 from '../../assest/callshap1.webp'
@@ -108,41 +107,43 @@ const values = [
 ];
 
 const Home = () => {
-    // const theme = useThemeContext();
     const theme = useTheme();
 
     return (
         <>
             <HomeBackground />
-            <Box sx={{ backgroundColor: theme.palette.primary.deem, py: 2, px: { xs: 2, md: 14, lg: 14 }, }}>
-                <Stack direction={'row'} alignItems={'center'} sx={{ display: { xs: 'block', md: 'flex', sm: 'block' } }}>
+            {/* <Box sx={{ backgroundColor: theme.palette.primary.deem, py: 2, px: { xs: 2, md: 14, lg: 20 }, }}>
+                <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} sx={{ display: { xs: 'block', md: 'flex', sm: 'block' } }}>
                     <Typography variant='h5' fontWeight={'bold'} sx={{ color: theme.palette.info.light }}>
                         Looking for a first-class career consultant?
                     </Typography>
                     <Button size='small' variant='none' sx={{ marginLeft: 'auto', color: theme.palette.info.light, background: theme.palette.primary.main, display: 'flex', alignItems: 'center', borderRadius: '50px', p: { xs: 1, md: 1 } }} endIcon={<KeyboardArrowRightIcon />}>get a quote</Button>
                 </Stack>
-            </Box>
+            </Box> */}
 
             {/* Most Trusted Software Development Company */}
-            <Box sx={{ py: 5, px: { xs: 2, md: 14, lg: 14 }, backgroundColor: theme.palette.primary.light }}>
-                <Typography variant='h4' fontWeight={'bold'} sx={{ textAlign: 'center', my: 1 }}>
-                    Most Trusted Software Development Company
-                </Typography>
-                <Box sx={{ px: { xs: 2, md: 5 } }}>
-                    <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
-                        Spirale Infosoft is the most trusted and reliable Software Development Company in Delhi NCR. Our years of experience and the best team of experts and developers, enables us to offer some of the finest and prime services to our clients. The team of experts and developers is highly experienced and well certified. Till date, we have catered to a good number of happy and satisfied clients, by meeting all their requirements and expectations.
+            <Box sx={{ py: 5, px: { xs: 2, md: 14, lg: 22 }, backgroundColor: theme.palette.primary.light }
+            }>
+                <Box sx={{ py: 5, borderRadius: '20px', px: 2, backgroundColor: theme.palette.primary.main }}>
+                    <Typography variant='h4' fontWeight={'bold'} sx={{ color: theme.palette.primary.deem, textAlign: 'center', mb: 3 }}>
+                        Most Trusted Software Development Company
                     </Typography>
-                    <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
-                        We provide best suited and custom solutions to our clients as per their business models and requirements. The services we offer to our clients are custom made, so that we can get the best results possible. We provide the best software development services in Noida. Our team of experts and developers is evolving each day with new trends and technologies in the market, which allows us to stand out and lead the market.
-                    </Typography>
-                    <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
-                        With our company and our services in IT, you can take your business to the new heights and dominate the market by targeting the actual audience with the help of our Ecommerce services, getting them hooked and engaged through our attractive and user friendly UI UX designs. For more scalability and versatility of the web app you can also integrate different platforms and business systems with the help of our API development services.
-                    </Typography>
-                    <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
-                        From the initial phases of web app development services to the later on maintenance and support services, we offer them all. We are the one stop destination for IT solutions. Our team of experienced experts is always there to serve you. HIRE THE BEST.
-                    </Typography>
-                </Box>
+                    <Box sx={{ px: { xs: 1, md: 5 }, color: '#FFF' }}>
+                        <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
+                            Spirale Infosoft is the most trusted and reliable Software Development Company in Delhi NCR. Our years of experience and the best team of experts and developers, enables us to offer some of the finest and prime services to our clients. The team of experts and developers is highly experienced and well certified. Till date, we have catered to a good number of happy and satisfied clients, by meeting all their requirements and expectations.
+                        </Typography>
+                        <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
+                            We provide best suited and custom solutions to our clients as per their business models and requirements. The services we offer to our clients are custom made, so that we can get the best results possible. We provide the best software development services in Noida. Our team of experts and developers is evolving each day with new trends and technologies in the market, which allows us to stand out and lead the market.
+                        </Typography>
+                        <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
+                            With our company and our services in IT, you can take your business to the new heights and dominate the market by targeting the actual audience with the help of our Ecommerce services, getting them hooked and engaged through our attractive and user friendly UI UX designs. For more scalability and versatility of the web app you can also integrate different platforms and business systems with the help of our API development services.
+                        </Typography>
+                        <Typography variant='body2' fontWeight={'0'} fontSize={'1rem'} sx={{}}>
+                            From the initial phases of web app development services to the later on maintenance and support services, we offer them all. We are the one stop destination for IT solutions. Our team of experienced experts is always there to serve you. HIRE THE BEST.
+                        </Typography>
+                    </Box>
 
+                </Box>
             </Box>
 
             {/* We provide solutions that works */}
@@ -258,7 +259,7 @@ const Home = () => {
             <OurServices />
 
             {/* What Clients Value Most About Us */}
-            <Box sx={{ p: 2, px: { xs: 2, md: 14, lg: 14 }, }}>
+            <Box sx={{ p: 2, px: { xs: 2, md: 14, lg: 22 }, }}>
                 <Box
                     sx={{
                         position: 'relative', // Position relative to stack on top of the overlay
@@ -342,7 +343,7 @@ const Home = () => {
             <Box
                 sx={{
                     height: 'auto',
-                    px: { xs: 2, lg: 15, md: 10 },
+                    px: { xs: 2, lg: 22, md: 10 },
                     my: { xs: 5, md: 5 },
                 }}
             >
@@ -419,7 +420,7 @@ const Home = () => {
                 sx={{
                     background: theme.palette.primary.light,
                     height: 'auto',
-                    px: { xs: 2, lg: 15, md: 10 },
+                    px: { xs: 2, lg: 22, md: 10 },
                     my: { xs: 5, md: 5 },
                 }}
             >
@@ -493,7 +494,7 @@ const Home = () => {
             <Box
                 sx={{
                     height: 'auto',
-                    px: { xs: 2, md: 10, lg: 15 },
+                    px: { xs: 2, md: 10, lg: 22 },
                     my: { xs: 5, md: 5 },
                 }}
             >
@@ -571,7 +572,7 @@ const Home = () => {
                 sx={{
                     backgroundColor: theme.palette.primary.main,
                     height: 'auto',
-                    px: { xs: 2, md: 20 },
+                    px: { xs: 2, md: 14, lg: 22 },
                     py: { xs: 2, md: 5 },
                     my: { xs: 5, md: 5 },
                     position: 'relative',
@@ -690,7 +691,7 @@ const Home = () => {
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed', // Fix the background image during scroll
                 height: 'auto',
-                px: { xs: 5, md: 10, lg: 15 },
+                px: { xs: 5, md: 10, lg: 22 },
                 py: { xs: 2, md: 5 },
                 my: { xs: 5, md: 5 },
             }}>
@@ -738,7 +739,6 @@ const Home = () => {
                     ))}
                 </Grid>
             </Box>
-
 
             {/* case Studt */}
             <Slider />

@@ -1,30 +1,36 @@
 import { Box, Divider, Grid, Stack, Typography, useTheme } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from '../../Component/Public/Slider';
 import Mission from '../../assest/Client/imgs/mission1.avif';
 import Vision from '../../assest/Client/imgs/vision1.jpg';
 import Goal from '../../assest/Client/imgs/mission.jpg';
-import AboutImg from '../../assest/Client/imgs/male-female-office-workers_155003-12596.avif';
+import AboutImg from '../../assest/about.jpeg';
+import AOS from 'aos';
 
 const About = () => {
     const theme = useTheme();
+    useEffect(() => {
+        AOS.init({ duration: 500 }); // Initialize AOS with default duration
+    }, []);
     return (
         <>
 
             {/* about header */}
-            <Box sx={{
-                width: '100%', // Correct viewport width unit
-                height: '40vh',
-                position: 'relative', // Make the parent Box relative to position overlay correctly
-                background: `url(${AboutImg})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover', // Ensure the image covers the box while maintaining its aspect ratio
-                backgroundPosition: 'center', // Center the background image
-                backgroundAttachment: 'fixed',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}>
+            <Box data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1500" sx={{
+                    mt: theme.spacing(8),
+                    width: '100%', // Correct viewport width unit
+                    height: '40vh',
+                    position: 'relative', // Make the parent Box relative to position overlay correctly
+                    background: `url(${AboutImg})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover', // Ensure the image covers the box while maintaining its aspect ratio
+                    backgroundPosition: 'center', // Center the background image
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
                 {/* Overlay Box */}
                 <Box
                     sx={{
@@ -104,7 +110,7 @@ const About = () => {
                 </Grid>
                 {/* what we do */}
                 <Grid container spacing={4}>
-                    <Grid item sm={6} xs={12}>
+                    <Grid item sm={6} xs={12} my={2}>
                         <Stack spacing={1}>
                             <Typography variant='h4' color='primary.main' fontWeight={'bold'}>What we do?</Typography>
                             <Typography variant='body2'>
@@ -210,7 +216,7 @@ const About = () => {
                 </Grid>
             </Box>
             {/* who we are */}
-            <Box sx={{ px: { xs: 2, md: 14, lg: 14 } }}>
+            <Box sx={{ mb: 2, px: { xs: 2, md: 14, lg: 14 } }}>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'primary.main', }}>
                     WHO WE ARE
                 </Typography>
@@ -222,89 +228,98 @@ const About = () => {
                 <Grid container spacing={2} >
                     {/* Mission Section */}
                     <Grid item xs={12} sm={6} md={4}>
-                        <Stack direction="row" alignItems="center" justifyContent="center" spacing={2}>
+                        <Stack direction="row" alignItems="center" justifyContent="center" spacing={3}>
                             <Box>
                                 <Typography
                                     sx={{
-                                        fontSize: '250px',
-                                        height: '300px',
+                                        fontSize: '240px',
+                                        fontFamily: 'sans-serif',
+                                        fontWeight: 900,
+                                        mt: -4,
+                                        overflow: 'hidden',
                                         background: `url(${Mission})`,
                                         // backgroundSize: 'cover',
                                         objectFit: 'cover',
                                         backgroundClip: 'text',
                                         color: 'transparent',
-                                        WebkitBackgroundClip: 'text',
-                                        fontWeight: 'bold',
-                                        overflow: 'hidden', // Prevents overflow if needed
+                                        WebkitBackgroundClip: 'text', // Prevents overflow if needed
                                         textOverflow: 'ellipsis', // Adds ellipsis if text overflows
                                     }}
                                 >
                                     M
                                 </Typography>
-                                <Typography variant="h4" fontWeight="bold">Our Mission</Typography>
-                                <Typography variant="body2">
-                                    To connect more businesses and strategies to the internet and enhance their web presence, which will empower youth and strengthen the country.
-                                </Typography>
+                                <Box sx={{ mt: theme.spacing(-8) }}>
+                                    <Typography variant="h4" fontWeight="bold">Our Mission</Typography>
+                                    <Typography variant="body2">
+                                        To connect more businesses and strategies to the internet and enhance their web presence, which will empower youth and strengthen the country.
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box>
-                                <Divider orientation="vertical" sx={{ display: { md: 'block', xs: 'none' }, height: '320px', width: '1px', mx: 3, backgroundColor: '#999' }} flexItem />
+                            <Box sx={{ height: '310px' }}>
+                                <Divider orientation="vertical" sx={{ display: { md: 'block', xs: 'none' }, mt: 3, mx: 2, width: '0px', height: '100%', backgroundColor: '#999' }} flexItem />
                             </Box>
                         </Stack>
                     </Grid>
 
                     {/* Vision Section */}
                     <Grid item xs={12} sm={6} md={4}>
-                        <Stack direction="row" alignItems="center" justifyContent="center" spacing={2}>
+                        <Stack direction="row" alignItems="center" justifyContent="center" spacing={3}>
                             <Box>
                                 <Typography
                                     sx={{
-                                        fontSize: '250px',
-                                        height: '300px',
+                                        fontSize: '240px',
                                         background: `url(${Vision})`,
                                         // backgroundSize: 'cover',
+                                        mt: -4,
                                         objectFit: 'cover',
                                         backgroundClip: 'text',
                                         color: 'transparent',
                                         WebkitBackgroundClip: 'text',
-                                        fontWeight: 'bold',
+                                        fontFamily: 'sans-serif',
+                                        fontWeight: 900,
                                     }}
                                 >
                                     V
                                 </Typography>
-                                <Typography variant="h4" fontWeight="bold">Our Vision</Typography>
-                                <Typography variant="body2">
-                                    Our vision is to establish our brand image through excellent customer service and using secure technology.
-                                </Typography>
+                                <Box sx={{ mt: theme.spacing(-8) }}>
+                                    <Typography variant="h4" fontWeight="bold">Our Vision</Typography>
+                                    <Typography variant="body2">
+                                        Our vision is to establish our brand image through excellent customer service and using secure technology.
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box>
-                                <Divider orientation="vertical" sx={{ display: { md: 'block', xs: 'none' }, height: '320px', width: '2px', mx: 3, backgroundColor: '#999' }} flexItem />
+                            <Box sx={{ height: '320px' }}>
+                                <Divider orientation="vertical" sx={{ display: { md: 'block', xs: 'none' }, mt: 3, mx: 2, width: '0px', height: '100%', backgroundColor: '#999' }} flexItem />
                             </Box>
                         </Stack>
                     </Grid>
 
                     {/* Goal Section */}
                     <Grid item xs={12} sm={6} md={4}>
-                        <Stack direction="row" alignItems="center" justifyContent="center" spacing={2}>
+                        <Stack direction="row" alignItems="center" justifyContent="center" spacing={3}>
                             <Box>
                                 <Typography
                                     sx={{
-                                        fontSize: '250px',
-                                        height: '300px',
+                                        fontSize: '240px',
                                         background: `url(${Goal})`,
                                         // backgroundSize: 'cover',
+                                        mt: -4,
                                         objectFit: 'cover',
                                         backgroundClip: 'text',
                                         color: 'transparent',
                                         WebkitBackgroundClip: 'text',
-                                        fontWeight: 'bold',
+                                        fontFamily: 'sans-serif',
+                                        fontWeight: 900,
                                     }}
                                 >
                                     G
                                 </Typography>
-                                <Typography variant="h4" fontWeight="bold">Our Goals</Typography>
-                                <Typography variant="body2">
-                                    We want to expand our business in areas least connected to technology, synchronizing them with a new digital India.
-                                </Typography>
+                                <Box sx={{ mt: theme.spacing(-8) }}>
+                                    <Typography variant="h4" fontWeight="bold">Our Goals</Typography>
+                                    <Typography variant="body2">
+                                        We want to expand our business in areas least connected to technology, synchronizing them with a new digital India.
+                                    </Typography>
+                                </Box>
                             </Box>
                         </Stack>
                     </Grid>
@@ -312,9 +327,8 @@ const About = () => {
             </Box >
 
             {/* Slider component */}
-            <Box sx={{ px: { xs: 2, md: 14, lg: 14 }, mt: 4 }}>
-                <Slider />
-            </Box>
+
+            <Slider />
         </>
     );
 };

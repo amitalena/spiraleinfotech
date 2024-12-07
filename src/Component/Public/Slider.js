@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, Typography, IconButton, useTheme } from '@mui/material';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { useThemeContext } from '../../App';
 
 import amar from '../../assest/Client/1.jpg';
 import azad from '../../assest/Client/2.jpg';
@@ -49,7 +48,7 @@ const Arrow = ({ onClick, direction }) => (
 
 export default function CaseStudy() {
     const [activeSlide, setActiveSlide] = useState(0);
-    const theme = useThemeContext();
+    const theme = useTheme();
 
     const settings = {
         dots: false,
@@ -77,9 +76,9 @@ export default function CaseStudy() {
     };
 
     return (
-        <Box sx={{ overflow: 'hidden', width: '100%' }}>
+        <Box sx={{ overflow: 'hidden', width: '100%', background: theme.palette.primary.light }}>
             <Box textAlign="center">
-                <Typography variant="h5" sx={{ color: theme.palette.ButtonColor, py: 1 }}>
+                <Typography variant="h4" sx={{ color: theme.palette.ButtonColor, py: 1 }}>
                     Case Study
                 </Typography>
                 <Typography variant="h4" py={1} fontWeight="bold">
@@ -88,7 +87,7 @@ export default function CaseStudy() {
                     clients
                 </Typography>
             </Box>
-            <Box py={5} sx={{ width: '100%', position: 'relative' }}>
+            <Box py={5} sx={{ width: '100%' }}>
                 <Slider {...settings}>
                     {clientImages.map((client, index) => {
                         const isCenter = isCenterSlide(index, 5);
@@ -102,7 +101,6 @@ export default function CaseStudy() {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     textAlign: 'center',
-                                    // px: { xs: 2, sm: 2, md: 1 },
                                     transform: isCenter ? 'scale(1) rotateY(0deg)' : 'scale(0.8) rotateY(20deg)',
                                     transition: 'transform 0.5s',
                                     '&:hover': { transform: 'scale(0.7)' },
@@ -147,6 +145,7 @@ export default function CaseStudy() {
                                         <Typography
                                             variant="h5"
                                             sx={{
+                                                width: '100%',
                                                 color: 'white',
                                                 backgroundColor: 'rgba(0, 0, 0, 0.2)',
                                                 padding: '8px 12px',
