@@ -28,7 +28,7 @@ const techData = [
     { name: "Java", color: '#41cf47', route: '/java-development-company' },
     { name: "Laravel", color: '#FAEA7C', route: '/laravel-development-company' },
     { name: "React.js", color: '#bf360c', route: '/reactjs-development-services' },
-    { name: "React Native", color: '#4fc3f7', route: '/cms-development' },
+    { name: "React Native", color: '#4fc3f7', route: '/react-native-app-development-company' },
 ];
 
 const OurService = () => {
