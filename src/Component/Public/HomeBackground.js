@@ -4,6 +4,7 @@ import Bubble1 from '../../assest/bubble3.png';
 import Bubble2 from '../../assest/bubble1.png';
 import Bubble3 from '../../assest/bubble2.png';
 import { Box, Button, keyframes, Stack, Typography, useTheme } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 // Keyframes for moving from bottom to top-right
 const moveBottomToTopRight = keyframes`
@@ -34,6 +35,7 @@ const Keyframe = {
 
 const HomeBackground = () => {
     const theme = useTheme();
+  const navigate = useNavigate();
     const backgroundStyle = {
         height: '90vh',
         backgroundImage: `url(${HomeImg})`,
@@ -134,7 +136,7 @@ const HomeBackground = () => {
                                 <Button variant="contained" sx={{ backgroundColor: theme.palette.primary.deem }}>Learn More</Button>
                             </Box>
                             <Box>
-                                <Button variant="outlined">Contact Us</Button>
+                                <Button variant="outlined" onClick={() => navigate('/contact')}>Contact Us</Button>
                             </Box>
                         </Stack>
                     </Box>
