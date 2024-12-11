@@ -37,7 +37,7 @@ const ContactBar = ({ isVisible }) => (
         sx={{
             background: "#070B3B",
             py: 0.5,
-            px: { xs: 1, sm: 10, lg: 22 },
+            px: { xs: 1, lg: 22 },
             display: isVisible ? 'block' : 'none',
         }}
     >
@@ -110,7 +110,7 @@ const HomeAppBar = () => {
                             justifyContent: "space-between",
                             alignItems: "center",
                             py: 2,
-                            px: { xs: 1, sm: 10, lg: 22 },
+                            px: { xs: 1, lg: 22 },
                         }}
                     >
                         {/* Logo Section */}
