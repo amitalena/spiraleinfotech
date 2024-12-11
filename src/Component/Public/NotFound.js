@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import NotFoundImage from '../../assest/notfound.mp4';
+import NotFoundImage from '../../assest/notfound1.mp4';
 
 const NotFound = () => {
     return (
