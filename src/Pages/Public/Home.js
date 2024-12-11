@@ -176,7 +176,7 @@ const Home = () => {
                     We provide solutions that work
                 </Typography>
 
-                <Grid2 container spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-around', padding: { xs: 2 } }} >
+                <Grid2 container spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-around' }} >
                     <Grid2
                         item
                         xs={12}
@@ -190,11 +190,11 @@ const Home = () => {
                                 alt="Screen 1"
                                 sx={{
                                     height: {
-                                        xs: '200px', // height for extra small screens
+                                        xs: '250px', // height for extra small screens
                                         md: '360px', // height for medium screens and up
                                     },
                                     width: {
-                                        xs: '200px', // width for extra small screens
+                                        xs: '250px', // width for extra small screens
                                         md: '200px', // width for medium screens and up
                                     },
                                 }}
@@ -203,7 +203,7 @@ const Home = () => {
                                 component="img"
                                 src={Screen1}
                                 alt="Screen 1"
-                                marginTop='50px'
+                                mt='50px'
                                 sx={{
                                     marginTop: '80px !important',
                                     height: {
@@ -282,7 +282,7 @@ const Home = () => {
                         sx={{ mt: { xs: 2, md: 4 }, }}
                     >
                         {values.map(({ id, image, description, BoxIcon, Pic, picname, picusername }) => (
-                            <Grid item xs={12} lg={4} sm={6} md={6} key={id}>
+                            <Grid item xs={12} lg={4} md={6} key={id}>
                                 <Box
                                     sx={{
                                         backgroundColor: theme.palette.primary.main,
