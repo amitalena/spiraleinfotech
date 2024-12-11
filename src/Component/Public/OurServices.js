@@ -152,7 +152,7 @@ const OurServices = () => {
             {/* Services Grid */}
             <Grid container justifyContent="center" position="relative" zIndex={1}>
                 {servicesData.map(({ id, icon: Icon, content, route, subContent }) => (
-                    <Grid item xs={12} sm={6} lg={2.8} key={id} sx={gridItemStyle}>
+                    <Grid item xs={12} md={6} lg={2.8} key={id} sx={gridItemStyle}>
                         <Box sx={contentBoxStyle}>
                             <Icon sx={{ fontSize: 60 }} />
                             <Typography variant="h6" fontWeight="bold">
