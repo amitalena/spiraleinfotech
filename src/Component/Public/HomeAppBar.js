@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../assest/spiralelogo.png";
 import menuData from "./menuData";
-import DropdownMenu from "./DrowdownMenu";
+import DropdownMenu from "./DropdownMenu";
 import AccordionMenu from "./AccordionMenu";
 import AOS from "aos";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";

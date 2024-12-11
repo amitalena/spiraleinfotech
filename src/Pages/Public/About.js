@@ -51,7 +51,7 @@ const About = () => {
                 </Box>
             </Box>
             {/* what we do */}
-            <Box sx={{ px: { xs: 2, md: 14, lg: 14 }, py: 3 }}>
+            <Box sx={{ px: { xs: 2, md: 14, lg: 22 }, py: 3 }}>
                 {/* what we do */}
                 <Grid container spacing={4}>
                     <Grid item sm={6} xs={12}>
@@ -216,7 +216,7 @@ const About = () => {
                 </Grid>
             </Box>
             {/* who we are */}
-            <Box sx={{ mb: 2, px: { xs: 2, md: 14, lg: 14 } }}>
+            <Box sx={{ mb: 2, px: { xs: 2, md: 14, lg: 22 } }}>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'primary.main', }}>
                     WHO WE ARE
                 </Typography>

@@ -52,7 +52,7 @@ const Career = () => {
             </Box>
 
             {/* Black box positioned at the bottom right */}
-            <Grid container spacing={5} sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 15, md: 10 }, }}>
+            <Grid container spacing={5} sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 22, md: 10 }, }}>
                 <Grid item xs={12} md={6}>
                     <Typography variant="h4" fontWeight="bold" py={2}>
                         JOIN OUR TEAM & <br /> LET'S WORK TOGETHER
@@ -68,8 +68,8 @@ const Career = () => {
                     <Box
                         sx={{
                             position: 'absolute',
-                            top: { xs: 10, sm: 10, md: 10, lg: -40 },
-                            right: { xs: -15, sm: -16, md: -25, lg: 20 },
+                            top: { xs: 10, sm: 10, md: 10, lg: 0 },
+                            right: { xs: -15, sm: -16, md: -25, lg: 0 },
                             backgroundColor: '#1e2024',
                             height: { xs: '200px', sm: '250px', md: '250px', lg: '350px' },
                             width: { xs: '250px', sm: '400px', md: '400px', lg: '500px' },
@@ -83,7 +83,7 @@ const Career = () => {
                             height: '100%',
                             width: '100%',
                             maxHeight: '350px',
-                            maxWidth: '550px',
+                            maxWidth: '510px',
                             objectFit: 'cover',
                             position: 'relative',
                             zIndex: 0,
@@ -93,7 +93,7 @@ const Career = () => {
             </Grid>
 
             {/* Journey at Paramount */}
-            <Grid container spacing={5} sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 15, md: 10 }, }}>
+            <Grid container spacing={5} sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 22, md: 10 }, }}>
                 <Grid item xs={12} sm={12} md={6} lg={3} textAlign={'-webkit-center'}>
                     <Box position="relative" width="280px" height="220px">
                         <img src={careerimg1} alt='career image1' width="100%" height="100%" style={{ borderRadius: '20px' }} />
@@ -155,7 +155,7 @@ const Career = () => {
             </Grid>
 
             {/* VACANCIES we're CURRENTLY hiring */}
-            <Box sx={{ backgroundColor: '#1e2024', py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 15, md: 10 } }}>
+            <Box sx={{ backgroundColor: '#1e2024', py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 22, md: 10 } }}>
                 <Grid container spacing={3} justifyContent="space-between" alignItems="center">
                     <Grid item xs={12} md={3}>
                         <Typography variant="h4" color={'#FFF'} fontWeight={'bold'} lineHeight={1.5}>
@@ -179,7 +179,7 @@ const Career = () => {
             </Box>
 
             {/* Perks & Benefits */}
-            <Box sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 15, md: 10 } }}>
+            <Box sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 22, md: 10 } }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                         <Typography variant='h4' mb={3} fontWeight='bold'>
