@@ -69,10 +69,10 @@ const Career = () => {
                         sx={{
                             position: 'absolute',
                             top: { xs: 10, sm: 10, md: 10, lg: 0 },
-                            right: { xs: -15, sm: -16, md: -25, lg: 0 },
+                            right: { xs: 0, md: -25, lg: 0 },
                             backgroundColor: '#1e2024',
                             height: { xs: '200px', sm: '250px', md: '250px', lg: '350px' },
-                            width: { xs: '250px', sm: '400px', md: '400px', lg: '500px' },
+                            width: { xs: '250px', sm: '100%', md: '400px', lg: '500px' },
                             zIndex: -1,
                         }}
                     />
@@ -95,7 +95,7 @@ const Career = () => {
             {/* Journey at Paramount */}
             <Grid container spacing={5} sx={{ py: { xs: 2, md: 3, lg: 5 }, px: { xs: 2, lg: 22, md: 10 }, }}>
                 <Grid item xs={12} sm={12} md={6} lg={3} textAlign={'-webkit-center'}>
-                    <Box position="relative" width="280px" height="220px">
+                    <Box position="relative" sx={{height: { xs: '250px', sm: '250px', md: '300px', lg: '200px' }, width: { xs: '250px', sm: '100%', md: '250px', lg: '280px' }}}>
                         <img src={careerimg1} alt='career image1' width="100%" height="100%" style={{ borderRadius: '20px' }} />
                         <Button
                             variant="contained"
@@ -192,7 +192,7 @@ const Career = () => {
 
                     <Grid item xs={12} md={6} container>
                         {perks.map((perk, index) => (
-                            <Grid item xs={6} sm={4} key={index}>
+                            <Grid item xs={6} sm={6} key={index}>
                                 <Box
                                     sx={{
                                         height: { xs: 150, sm: 150, md: 200 },
@@ -203,7 +203,7 @@ const Career = () => {
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         textAlign: 'center',
-                                        mx: 'auto',
+                                        m: 1,
                                         transition: 'all 0.3s ease',
                                         '&:hover': {
                                             backgroundColor: perk.color,
