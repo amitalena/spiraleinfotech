@@ -54,7 +54,7 @@ const About = () => {
             <Box sx={{ px: { xs: 2, md: 14, lg: 22 }, py: 3 }}>
                 {/* what we do */}
                 <Grid container spacing={4}>
-                    <Grid item sm={6} xs={12}>
+                    <Grid item sm={12} xs={12}>
                         <Box sx={{
                             background: `url(${Mission})`,
                             backgroundSize: 'cover', // Ensure the background image covers the entire box
@@ -93,7 +93,7 @@ const About = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid item sm={6} xs={12}>
+                    <Grid item sm={12} xs={12}>
                         <Stack spacing={1}>
                             <Typography variant='h4' color='primary.main' fontWeight={'bold'}>A perfect fusion of technology <br /> and creativity</Typography>
                             <Typography variant='body2'>
@@ -110,7 +110,7 @@ const About = () => {
                 </Grid>
                 {/* what we do */}
                 <Grid container spacing={4}>
-                    <Grid item sm={6} xs={12} my={2}>
+                    <Grid item sm={12} xs={12} my={2}>
                         <Stack spacing={1}>
                             <Typography variant='h4' color='primary.main' fontWeight={'bold'}>What we do?</Typography>
                             <Typography variant='body2'>
@@ -124,7 +124,7 @@ const About = () => {
                             </Typography>
                         </Stack>
                     </Grid>
-                    <Grid item sm={6} xs={12}>
+                    <Grid item sm={12} xs={12}>
                         <Box sx={{
                             background: `url(${Vision})`,
                             backgroundSize: 'cover', // Ensure the background image covers the entire box
@@ -166,7 +166,7 @@ const About = () => {
                 </Grid>
                 {/* my teams */}
                 <Grid container spacing={4}>
-                    <Grid item sm={6} xs={12}>
+                    <Grid item sm={12} xs={12}>
                         <Stack spacing={1}>
                             <Typography variant='h4' color='primary.main' fontWeight={'bold'}>
                                 Team of experts?
@@ -180,7 +180,7 @@ const About = () => {
                         </Stack>
                     </Grid>
                     {/*  our mission */}
-                    <Grid item sm={6} xs={12}>
+                    <Grid item sm={12} xs={12}>
                         <Stack spacing={1}>
                             <Typography variant='h4' color='primary.main' fontWeight={'bold'}>
                                 Our mission
@@ -227,7 +227,7 @@ const About = () => {
                 {/* Grid for Mission, Vision, Goal */}
                 <Grid container spacing={2} >
                     {/* Mission Section */}
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={12} md={4}>
                         <Stack direction="row" alignItems="center" justifyContent="center" spacing={3}>
                             <Box>
                                 <Typography
@@ -262,7 +262,7 @@ const About = () => {
                     </Grid>
 
                     {/* Vision Section */}
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={12} md={4}>
                         <Stack direction="row" alignItems="center" justifyContent="center" spacing={3}>
                             <Box>
                                 <Typography
@@ -295,7 +295,7 @@ const About = () => {
                     </Grid>
 
                     {/* Goal Section */}
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={12} md={4}>
                         <Stack direction="row" alignItems="center" justifyContent="center" spacing={3}>
                             <Box>
                                 <Typography
