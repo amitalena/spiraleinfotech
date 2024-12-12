@@ -176,7 +176,7 @@ const Home = () => {
                     We provide solutions that work
                 </Typography>
 
-                <Grid2 container spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-around' }} >
+                <Grid2 container sx={{ alignItems: 'center', justifyContent: 'space-around' }} >
                     <Grid2
                         item
                         xs={12}
@@ -220,7 +220,7 @@ const Home = () => {
                     </Grid2>
 
                     <Grid2 item xs={12} md={6} sx={{ py: 5 }}>
-                        <Stack spacing={2}>
+                        <Stack spacing={1}>
                             {data.map((item, index) => (
                                 <Box
                                     key={index}
@@ -692,7 +692,7 @@ const Home = () => {
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed', // Fix the background image during scroll
                 height: 'auto',
-                px: { xs: 5, md: 10, lg: 22 },
+                px: { xs: 2, md: 10, lg: 22 },
                 py: { xs: 2, md: 5 },
                 my: { xs: 5, md: 5 },
             }}>
