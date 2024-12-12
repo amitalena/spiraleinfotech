@@ -60,7 +60,7 @@ const OurWorking = () => {
             </Box>
             <Grid container spacing={2}>
                 {discoveryItems.map((item, index) => (
-                    <Grid item xs={12} lg={3} md={4} sm={6} key={item.id}>
+                    <Grid item xs={12} lg={3} md={4} sm={12} key={item.id}>
                         <Card sx={{ boxShadow: 2, backgroundColor: item.bgColor }}>
 
                             <Stack direction={'row'} justifyContent={'space-between'}>
