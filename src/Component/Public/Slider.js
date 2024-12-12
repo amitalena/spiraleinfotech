@@ -110,7 +110,7 @@ export default function CaseStudy() {
                                     sx={{
                                         position: 'relative',
                                         width: '100%',
-                                        maxWidth: { xs: '90%', sm: '80%', md: '100%' },
+                                        maxWidth: { xs: '100%', sm: '80%', md: '100%' },
                                         transform: isCenter ? 'rotateY(0deg)' : 'rotateY(-20deg)',
                                     }}
                                 >
