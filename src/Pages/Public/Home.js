@@ -27,7 +27,7 @@ import Callus from '../../assest/callus.webp'
 import callshape1 from '../../assest/callshap1.webp'
 import callshape2 from '../../assest/callshap2.webp'
 import callshape3 from '../../assest/callshap3.webp'
-
+import {navigate} from 'react-router-dom'
 
 // Keyframes for the left image
 const moveLeftImg = keyframes`
@@ -108,7 +108,7 @@ const values = [
 
 const Home = () => {
     const theme = useTheme();
-
+    const navigate=useNavigate();
     return (
         <>
             <HomeBackground />
@@ -194,7 +194,7 @@ const Home = () => {
                                         md: '360px', // height for medium screens and up
                                     },
                                     width: {
-                                        xs: '250px', // width for extra small screens
+                                        xs: '200px', // width for extra small screens
                                         md: '200px', // width for medium screens and up
                                     },
                                 }}
@@ -207,7 +207,7 @@ const Home = () => {
                                 sx={{
                                     marginTop: '80px !important',
                                     height: {
-                                        xs: '200px', // height for extra small screens
+                                        xs: '250px', // height for extra small screens
                                         md: '360px', // height for medium screens and up
                                     },
                                     width: {
@@ -220,13 +220,13 @@ const Home = () => {
                     </Grid2>
 
                     <Grid2 item xs={12} md={6} sx={{ py: 5 }}>
-                        <Stack spacing={3}>
+                        <Stack spacing={2}>
                             {data.map((item, index) => (
                                 <Box
                                     key={index}
                                     sx={{
                                         backgroundColor: theme.palette.primary.deem,
-                                        padding: 2,
+                                        p: 2,
                                         color: 'white',
                                         borderRadius: 8
                                     }}
@@ -631,6 +631,7 @@ const Home = () => {
                             Need Help? We will help you regarding your query.
                         </Typography>
                         <Button
+                            onClick={()=>navigate('/contact')}
                             variant="contained"
                             sx={{ backgroundColor: theme.palette.ButtonColor, my: 1 }}
                         >
@@ -727,7 +728,7 @@ const Home = () => {
                         <Grid
                             item
                             key={index}
-                            xs={12} sm={6} md={3} lg={2}
+                            xs={12} md={3} lg={2}
                         >
                             <Box sx={{ border: '1px solid #fff', px: 4, py: 3, borderRadius: 1 }}>
                                 {React.cloneElement(item.icon, { sx: { height: '60px', width: '60px', color: '#FFF' } })}
