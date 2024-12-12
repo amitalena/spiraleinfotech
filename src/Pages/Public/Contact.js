@@ -167,7 +167,7 @@ const Contact = () => {
                                     }}
                                 />
                             </Box>
-                            <Box width={'100%'} sx={{ marginLeft: { xs: 0, sm: 0, md: 1 } }}>
+                            <Box width={'100%'}>
                                 <Typography variant='h6' pb={1}>Your Email*</Typography>
                                 <TextField
                                     placeholder="Your Email"
@@ -211,7 +211,7 @@ const Contact = () => {
                                     }}
                                 />
                             </Box>
-                            <Box width={'100%'} sx={{ marginLeft: { xs: 0, sm: 0, md: 1 } }}>
+                            <Box width={'100%'}>
                                 <Typography variant='h6' pb={1}>Subject</Typography>
                                 <TextField
                                     placeholder="Subject"
