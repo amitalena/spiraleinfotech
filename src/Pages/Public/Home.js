@@ -27,7 +27,7 @@ import Callus from '../../assest/callus.webp'
 import callshape1 from '../../assest/callshap1.webp'
 import callshape2 from '../../assest/callshap2.webp'
 import callshape3 from '../../assest/callshap3.webp'
-import {navigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 // Keyframes for the left image
 const moveLeftImg = keyframes`
