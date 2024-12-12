@@ -121,7 +121,7 @@ const OurServices = () => {
         <Box
             sx={{
                 py: 5,
-                px: { xs: 2, md: 14, lg: 22 },
+                px: { xs: 1, md: 14, lg: 22 },
                 backgroundColor: theme.palette.primary.main,
                 position: 'relative',
             }}
